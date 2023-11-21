@@ -33,17 +33,23 @@ export default function TaskList () {
     }
 
     return (
-        <div>
-        <TaskForm onAdd={addTask} />
+        <div className="container-list">
+                <div className="logoText">
+                    <img src="src/assets/logo-tarea-24-7.png" alt="Logo de Tareas 24/7" />
+                    <h2>Tareas</h2>
+                </div>
+            <div>
+            <TaskForm onAdd={addTask} />
 
-        {tasks.map(task => (
-            <TaskItem  
-              key={task.id}
-              task={task}
-              onComplete={completeTask}
-              onDelete={deleteTask}
-            />
-        ))}
+            {tasks.map(task => (
+                <TaskItem  
+                key={task.id}
+                task={task}
+                onComplete={completeTask}
+                onDelete={deleteTask}
+                />
+            ))}
+            </div>
         </div>
     );
 }
