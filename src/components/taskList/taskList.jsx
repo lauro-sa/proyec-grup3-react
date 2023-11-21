@@ -33,6 +33,7 @@ export default function TaskList () {
     }
 
     return (
+        <div>
         <TaskForm onAdd={addTask} />
 
         {tasks.map(task => (
@@ -43,5 +44,6 @@ export default function TaskList () {
               onDelete={deleteTask}
             />
         ))}
-    )
+        </div>
+    );
 }
