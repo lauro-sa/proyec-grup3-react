@@ -1,7 +1,8 @@
 //Lista de tareas
-
+import React, { useState, useEffect } from 'react';
 import TaskForm from "../taskForm/taskForm";
 import TaskItem from "../taskItem/taskItem";
+import './taskList.css';
 
 export default function TaskList () {
     const [tasks, setTasks] = useState([
