@@ -1,7 +1,11 @@
 //Lista de tareas
+
+// Importamos React y los hooks que vamos a utilizar
 import React, { useState, useEffect } from 'react';
+// Importamos el componente de formulario de tareas
 import TaskForm from "../taskForm/taskForm";
 import TaskItem from "../taskItem/taskItem";
+// Importamos los estilos de la lista de tareas
 import './taskList.css';
 
 export default function TaskList () {
