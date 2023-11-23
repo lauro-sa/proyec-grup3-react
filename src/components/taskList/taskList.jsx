@@ -13,7 +13,7 @@ export default function ListaDeTareas() {
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
 
-    // Estado para las tareas que han sido eliminadas.
+    // Estado para las tareas que se eliminaron.
     const [deletedTasks, setDeletedTasks] = useState(() => {
         const savedDeletedTasks = localStorage.getItem('deletedTasks');
         return savedDeletedTasks ? JSON.parse(savedDeletedTasks).slice(0, 3) : [];
