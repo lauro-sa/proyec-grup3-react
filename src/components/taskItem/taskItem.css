@@ -1,0 +1,55 @@
+/* Contenedor de la tarea individual */
+.item-tarea {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el texto de la tarea */
+.item-tarea p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Estilo para tareas completadas y eliminadas */
+.tareas-completadas .item-tarea {
+    background-color: rgb(206, 237, 206);
+
+    color: #5c8165;
+}
+
+
+.tareas-eliminadas .item-tarea {
+    background-color: rgba(255, 103, 116, 0.45);
+
+    color: #5c8165;
+}
+
+.tareas-completadas .item-tarea>p,
+.tareas-eliminadas .item-tarea>p{
+    text-decoration: line-through;
+}
+
+/* Botones para completar y eliminar la tarea */
+.boton {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Botón para marcar la tarea como completada */
+.boton.completar {
+    color: #28a745;
+}
+
+/* Botón para eliminar la tarea */
+.boton.eliminar {
+    color: rgb(255, 103, 115);
+}
+

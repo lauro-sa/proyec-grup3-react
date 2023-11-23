@@ -1,0 +1,52 @@
+/* Estilos para el formulario de agregar tarea */
+.formulario-agregar-tarea {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+}
+
+/* Estilo para el input del formulario */
+.formulario-agregar-tarea .input-tarea {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+
+/* Estilo para el botón de agregar tarea */
+.formulario-agregar-tarea .boton-agregar {
+    padding: 10px 15px;
+    border: none;
+    background-color:rgb(2, 99, 196);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario-agregar-tarea .boton-agregar:hover {
+    background-color: #0056b3;
+}
+
+
+.input-tarea::placeholder {
+    transition: all 0.3s ease;
+    opacity: 1; 
+}
+
+.input-tarea.focused::placeholder {
+    opacity: 0.5; 
+}
+
+@media screen and (max-width: 600px) {
+    .formulario-agregar-tarea {
+        flex-direction: column;
+    }
+
+    .formulario-agregar-tarea .input-tarea,
+    .formulario-agregar-tarea .boton-agregar {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

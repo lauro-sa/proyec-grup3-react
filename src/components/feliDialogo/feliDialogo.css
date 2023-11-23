@@ -1,0 +1,83 @@
+/* Estilos para el overlay que oscurece el fondo */
+.info-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que está por encima de otros elementos */
+}
+
+/* Estilos para el cuadro de diálogo */
+.info-dialog-box {
+    max-width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slide-down 0.5s ease-out forwards;
+}
+
+/* Título del cuadro de diálogo */
+.info-dialog-box h3 {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+/* Mensaje del cuadro de diálogo */
+.info-dialog-box h5 {
+    font-size: 18px;
+    color: #0263C4;
+    margin-bottom: 30px;
+}
+
+/* Emoji y otros elementos decorativos */
+.info-dialog-box>.f-2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Botón para cerrar el diálogo */
+.info-dialog-box button {
+    background-color: #0263C4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.info-dialog-box button:hover {
+    background-color: #024c8c;
+}
+
+/* Animaciones */
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes brillo {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Asegúrate de que el emoji no sea seleccionable para mejorar la experiencia del usuario */
+.info-dialog-box p {
+    user-select: none;
+}
